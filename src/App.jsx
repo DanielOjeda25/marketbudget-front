@@ -1,13 +1,15 @@
-import './App.css'
-import { Counter } from './components/button/Button'
+import { createBrowserRouter } from "react-router-dom";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
 
-function App() {
-
-  return (
-    <>
-      <Counter />
-    </>
-  )
-}
-
-export default App
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  }
+])
+export default router
