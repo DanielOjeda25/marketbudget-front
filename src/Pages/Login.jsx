@@ -1,7 +1,8 @@
+import Layout from '../Layout';
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <Layout>Login</Layout>
   )
 }
 

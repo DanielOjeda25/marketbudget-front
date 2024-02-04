@@ -1,6 +1,8 @@
 import { Navbar } from "keep-react";
+import { useLocation } from "react-router-dom";
 
 const NavbarComponent = () => {
+  const location = useLocation();
   return (
     <Navbar fluid={true} className="bg-slate-900 shadow-md">
       <Navbar.Container className="flex items-center justify-between ">
@@ -9,7 +11,7 @@ const NavbarComponent = () => {
           className="lg:flex hidden items-center justify-between gap-8 "
         >
           <Navbar.Link linkName="Inicio" className="" href="/" />
-          <Navbar.Link linkName="Projecto" />
+          <Navbar.Link linkName="Proyecto" />
         </Navbar.Container>
         <Navbar.Brand>
           <img
@@ -23,9 +25,11 @@ const NavbarComponent = () => {
         <Navbar.Collapse collapseType="sidebar">
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
             <Navbar.Link linkName="Inicio" />
-            <Navbar.Link linkName="Projecto" />
+            <Navbar.Link linkName="Proyecto" />
             <Navbar.Link linkName="About Us" />
-            <Navbar.Link linkName="Iniciar Sesión" href="/login" />
+            {location.pathname !== "/login" && (
+              <Navbar.Link linkName="Iniciar Sesión" href="/login" />
+            )}
           </Navbar.Container>
         </Navbar.Collapse>
 
@@ -35,7 +39,9 @@ const NavbarComponent = () => {
             className="lg:flex hidden items-center justify-between gap-5"
           >
             <Navbar.Link linkName="Sobre Nosotros" />
-            <Navbar.Link linkName="Iniciar Sesión" href="/login" />
+            {location.pathname !== "/login" && (
+              <Navbar.Link linkName="Iniciar Sesión" href="/login" />
+            )}
           </Navbar.Container>
           <Navbar.Toggle />
         </Navbar.Container>
