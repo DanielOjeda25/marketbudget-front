@@ -32,7 +32,7 @@ const CustomFooter = () => {
       </div>
 
       <div className="text-center  ">
-        <Typography variant="caption" className='w-full text-sm'>© 2024 Tu Empresa. Todos los derechos reservados.</Typography>
+        <Typography variant="p" className='w-full text-sm'>© 2024 Tu Empresa. Todos los derechos reservados.</Typography>
       </div>
     </footer>
   );
