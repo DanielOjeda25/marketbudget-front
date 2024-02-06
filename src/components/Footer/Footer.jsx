@@ -1,7 +1,6 @@
 import { Typography } from 'keep-react';
 
 const CustomFooter = () => {
-  const inicioLink = "/";
   const proyectoLink = "/proyecto";
   const aboutUsLink = "/about-us";
   const loginLink = "/login";
@@ -14,16 +13,13 @@ const CustomFooter = () => {
           <img src="/vite.svg" alt="Logo" className="h-8 md:h-10" />
         </div>
         <div className="ml-0 md:ml-4 mt-4 md:mt-0 md:flex md:items-center">
-          <a href={inicioLink} className="text-gray-300 hover:text-gray-500 block md:inline-block mr-4">
-            Inicio
-          </a>
           <a href={proyectoLink} className="text-gray-300 hover:text-gray-500 block md:inline-block mr-4">
             Proyecto
           </a>
           <a href={aboutUsLink} className="text-gray-300 hover:text-gray-500 block md:inline-block mr-4">
-            About Us
+            Sobre Nosotros
           </a>
-          {location.pathname !== "/login" && (
+          {location.pathname !== "/login" || location.pathname !== "/" && (
             <a href={loginLink} className="text-gray-300 hover:text-gray-500 block md:inline-block">
               Iniciar Sesión
             </a>

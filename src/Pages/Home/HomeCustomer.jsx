@@ -1,12 +1,12 @@
-import Layout from '../../Layout';
+import LayoutCustomer from '../../LayoutCustomer';
 
 const HomeCustomer = () => {
   return (
-    <Layout>
+    <LayoutCustomer>
       {/* Contenido específico de tu página */}
       <h1>Bienvenido a mi página de inicio Customer</h1>
       <p>Aquí puedes agregar más contenido</p>
-    </Layout>
+    </LayoutCustomer>
   );
 }
 
