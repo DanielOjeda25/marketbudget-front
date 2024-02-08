@@ -4,14 +4,14 @@ import { useLocation } from "react-router-dom";
 const NavbarComponent = () => {
   const location = useLocation();
   return (
-    <Navbar fluid={true} className="bg-slate-900 shadow-md">
+    <Navbar fluid={true} className="bg-slate-100 shadow-md ">
       <Navbar.Container className="flex items-center justify-between ">
         <Navbar.Container
           tag="ul"
           className="lg:flex hidden items-center justify-between gap-8 "
         >
           <Navbar.Link linkName="Inicio" className="" href="/" />
-          <Navbar.Link linkName="Proyecto" />
+          <Navbar.Link linkName="Ayuda" href="/ayuda" />
         </Navbar.Container>
         <Navbar.Brand>
           <img
@@ -25,10 +25,10 @@ const NavbarComponent = () => {
         <Navbar.Collapse collapseType="sidebar">
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
             <Navbar.Link linkName="Inicio" href="/" />
-            <Navbar.Link linkName="Proyecto" />
-            <Navbar.Link linkName="Sobre Nosotros" />
+            <Navbar.Link linkName="Ayuda" href="/ayuda" />
+            <Navbar.Link linkName="Sobre Nosotros" href="/sobrenosotros" />
             {location.pathname !== "/login" && (
-              <Navbar.Link linkName="Iniciar Sesión" href="/login" />
+              <a href="/login" className="px-4 py-2 bg-blue-600 rounded-full text-white hover:text-blue-600 hover:bg-slate-100">Iniciar Sesión</a>
             )}
           </Navbar.Container>
         </Navbar.Collapse>
@@ -38,9 +38,9 @@ const NavbarComponent = () => {
             tag="ul"
             className="lg:flex hidden items-center justify-between gap-5"
           >
-            <Navbar.Link linkName="Sobre Nosotros" />
+            <Navbar.Link linkName="Sobre Nosotros" href="/sobrenosotros" />
             {location.pathname !== "/login" && (
-              <Navbar.Link linkName="Iniciar Sesión" href="/login" />
+              <a href="/login" className="px-4 py-2 bg-blue-600 rounded-full text-white hover:text-blue-600 hover:bg-slate-100">Iniciar Sesión</a>
             )}
           </Navbar.Container>
           <Navbar.Toggle />

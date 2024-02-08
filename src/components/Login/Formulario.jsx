@@ -15,9 +15,14 @@ const Formulario = () => {
   };
   useEffect(() => {
     // Verifica si la autenticación ha tenido éxito
-    if (status === 'succeeded') {
+    if (status === 'succeeded' && token) {
       console.log('Usuario autenticado:', user);
       console.log('Token:', token);
+
+      // Guardar el token en localStorage
+      localStorage.setItem('token', token);
+
+      // Redirigir al usuario a la página de inicio
       navigate('/home');
     }
 
@@ -26,7 +31,6 @@ const Formulario = () => {
       console.error('Error de autenticación:', error);
     }
   }, [status, user, token, error, navigate]);
-
 
   return (
     <form className="max-w-md mx-auto">

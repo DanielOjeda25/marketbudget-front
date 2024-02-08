@@ -1,11 +1,12 @@
 import Layout from '../../Layout';
+import Hero from '../../components/Hero/Hero';
+import Howto from '../../components/Instrucciones/Howto';
 
 const Home = () => {
   return (
     <Layout>
-      {/* Contenido específico de tu página */}
-      <h1>Bienvenido a mi página de inicio</h1>
-      <p>Aquí puedes agregar más contenido</p>
+      <Hero />
+      <Howto />
     </Layout>
   );
 }

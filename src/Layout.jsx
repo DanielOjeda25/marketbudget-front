@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavbarComponent />
-      <div className="flex-grow container mx-auto p-4">
+      <div className="flex-grow container mx-auto ">
         {/* Agrega cualquier otro contenido que quieras dentro del layout */}
         {children}
       </div>

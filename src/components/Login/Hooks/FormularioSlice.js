@@ -9,8 +9,6 @@ export const authenticateUser = createAsyncThunk('user/authenticate', async (cre
     console.log(credentials)
     const response = await axios.post(loginEndpoint, credentials);
 
-    // Axios manejará automáticamente la verificación de la respuesta y lanzará un error si no es exitosa.
-
     return response.data;
   } catch (error) {
     throw new Error('Error al autenticar usuario: ' + error.message);
