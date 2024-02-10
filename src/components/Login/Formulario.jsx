@@ -67,7 +67,7 @@ const Formulario = () => {
         <Button size="md" type="outlinePrimary" className="mb-4 md:mb-0 md:mr-4" onClick={handleLogin}>
           Iniciar Sesión
         </Button>
-        <a href="#" className="text-gray-600 hover:underline text-center md:text-left">
+        <a href="/crear" className="text-gray-600 hover:underline text-center md:text-left">
           Olvidaste tu contraseña?
         </a>
       </div>
