@@ -14,10 +14,12 @@ const CustomFooter = () => {
     <footer className="bg-gray-100 text-slate-900 p-4 md:p-8">
       <div className="flex flex-col md:flex-row items-center justify-center mb-4 ">
         <div className="mb-4 md:mb-0">
-          {/* Agrega tu logo aquí */}
           <img src="/vite.svg" alt="Logo" className="h-8 md:h-10" />
         </div>
         <div className="ml-0 md:ml-4 mt-4 md:mt-0 md:flex md:items-center">
+          <a className="text-gray-500 hover:text-gray-900 block md:inline-block mr-4">
+            Posadas, Misiones Argentina, 3300
+          </a>
           <a href={aboutUsLink} className="text-gray-500 hover:text-gray-900 block md:inline-block mr-4">
             Sobre Nosotros
           </a>

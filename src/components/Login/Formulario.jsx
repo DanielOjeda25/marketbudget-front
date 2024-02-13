@@ -64,11 +64,11 @@ const Formulario = () => {
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-between my-5">
-        <Button size="md" type="outlinePrimary" className="mb-4 md:mb-0 md:mr-4" onClick={handleLogin}>
+        <Button size="sm" type="outlinePrimary" className="mb-4 md:mb-0 md:mr-4" onClick={handleLogin}>
           Iniciar Sesión
         </Button>
-        <a href="/crear" className="text-gray-600 hover:underline text-center md:text-left">
-          Olvidaste tu contraseña?
+        <a href="/crear" className="text-gray-600 text-sm hover:underline text-center md:text-left">
+          ¿No estas registrado? Click aqui
         </a>
       </div>
     </form>
