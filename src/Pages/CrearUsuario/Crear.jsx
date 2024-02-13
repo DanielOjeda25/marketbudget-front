@@ -27,7 +27,7 @@ const Crear = () => {
     try {
       const response = await axios.post(`${crearUser}`, formDataComercio);
       console.log(response);
-      if (response.status === 200) {
+      if (response.status === 200 || response.status === 202) {
         navigate('/login');
         console.log('Usuario creado exitosamente:', response.data);
       }
