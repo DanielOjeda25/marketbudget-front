@@ -28,7 +28,7 @@ const NavbarComponent = () => {
             <Navbar.Link linkName="Ayuda" href="/ayuda" />
             <Navbar.Link linkName="Sobre Nosotros" href="/sobrenosotros" />
             {location.pathname !== "/login" && (
-              <a href="/login" className="px-4 py-2 bg-blue-600 rounded-full text-white hover:text-blue-600 hover:bg-slate-100">Iniciar Sesión</a>
+              <a href="/login" className="px-4 py-2 bg-blue-600 rounded-full text-white hover:text-blue-600 hover:bg-slate-100">Iniciar Sesión / Registrarse</a>
             )}
           </Navbar.Container>
         </Navbar.Collapse>

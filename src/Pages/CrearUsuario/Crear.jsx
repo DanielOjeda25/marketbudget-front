@@ -3,10 +3,16 @@ import axios from 'axios';
 import Layout from '../../Layout';
 import { crearUser } from '../../endpoints';
 import { useNavigate } from 'react-router-dom';
+import { Alert } from 'keep-react';
+import { XCircle } from '@phosphor-icons/react';
 
 const Crear = () => {
   const navigate = useNavigate();
-
+  const [errorMessage, setError] = useState(null);
+  const [showAlert, setShowAlert] = useState(false)
+  const onDismiss = () => {
+    setShowAlert(!showAlert)
+  }
   const [formDataComercio, setFormDataComercio] = useState({
     businessName: '',
     email: '',
@@ -32,7 +38,8 @@ const Crear = () => {
         console.log('Usuario creado exitosamente:', response.data);
       }
     } catch (error) {
-      console.error('Error al crear usuario:', error);
+      setError(error.response.data.error.description)
+      console.error('Error al crear usuario:', error.response.data.error.description);
       console.log(formDataComercio);
     }
   };
@@ -73,6 +80,36 @@ const Crear = () => {
             Registrarse
           </button>
         </form>
+        <div className='py-6'>
+          {
+            errorMessage && (
+              <Alert
+                onDismiss={onDismiss}
+                dismiss={showAlert}
+                rounded={true}
+                withBorder={true}
+                withBorderAccent={true}
+                color="error">
+                <Alert.Container>
+                  <Alert.Icon>
+                    <XCircle size={24} color="#E92215" />
+                  </Alert.Icon>
+                  <Alert.Body>
+                    <Alert.Title>Error</Alert.Title>
+                    <Alert.Description>
+                      {
+                        errorMessage.map((e, i) => (
+                          <p key={i}>{e}</p>
+                        ))
+                      }
+                    </Alert.Description>
+                  </Alert.Body>
+                </Alert.Container>
+              </Alert>
+            )
+          }
+        </div>
+
       </section>
     </Layout>
   );
